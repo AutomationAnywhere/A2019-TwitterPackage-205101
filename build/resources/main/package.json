@@ -1,0 +1,412 @@
+{
+    "name": "Twitter",
+    "label": "[[label]]",
+    "description": "[[description]]",
+    "group": "com.automationanywhere",
+    "artifactName": "Twitter",
+    "packageVersion": "2.0.7-20210304-145424",
+    "codeVersion": "2.0.7-20210304-145424",
+    "author": "",
+    "commands": [
+        {
+            "name": "CommentOnTweet",
+            "label": "[[CommentOnTweet.label]]",
+            "description": "[[CommentOnTweet.description]]",
+            "nodeLabel": "[[CommentOnTweet.node_label]]",
+            "mainClass": "com.automationanywhere.botcommand.CommentOnTweetCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "[[CommentOnTweet.return_label]]",
+            "returnRequired": true,
+            "returnDescription": "[[CommentOnTweet.return.description]]",
+            "attributes": [
+                {
+                    "name": "SessionName",
+                    "label": "[[CreateSession.sessionName.label]]",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "Default",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "originalTweet",
+                    "label": "[[CommentOnTweet.originalTweet.label]]",
+                    "description": "[[CommentOnTweet.originalTweet.description]]",
+                    "type": "TEXTAREA",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "statusBody",
+                    "label": "[[CommentOnTweet.statusBody.label]]",
+                    "description": "[[CommentOnTweet.statusBody.description]]",
+                    "type": "TEXTAREA",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "statusMedia",
+                    "label": "[[CommentOnTweet.statusMedia.label]]",
+                    "description": "[[CommentOnTweet.statusMedia.description]]",
+                    "type": "FILE"
+                }
+            ]
+        },
+        {
+            "name": "createsession",
+            "label": "[[CreateSession.label]]",
+            "description": "[[CreateSession.description]]",
+            "nodeLabel": "[[CreateSession.node_label]]",
+            "mainClass": "com.automationanywhere.botcommand.CreateSessionCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "[[CreateSession.return_label]]",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "SessionName",
+                    "label": "[[CreateSession.sessionName.label]]",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "Default",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "ConsumerKey",
+                    "label": "[[CreateSession.consumerKey.label]]",
+                    "description": "[[CreateSession.fieldDescription]]",
+                    "type": "CREDENTIAL",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "ConsumerSecret",
+                    "label": "[[CreateSession.consumerSecret.label]]",
+                    "description": "[[CreateSession.fieldDescription]]",
+                    "type": "CREDENTIAL",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "AccessToken",
+                    "label": "[[CreateSession.accessToken.label]]",
+                    "description": "[[CreateSession.fieldDescription]]",
+                    "type": "CREDENTIAL",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "TokenSecret",
+                    "label": "[[CreateSession.tokenSecret.label]]",
+                    "description": "[[CreateSession.fieldDescription]]",
+                    "type": "CREDENTIAL",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "FollowUser",
+            "label": "[[FollowUser.label]]",
+            "description": "[[FollowUser.description]]",
+            "nodeLabel": "[[FollowUser.node_label]]",
+            "mainClass": "com.automationanywhere.botcommand.FollowUserCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "[[FollowUser.return_label]]",
+            "returnRequired": true,
+            "returnDescription": "[[FollowUser.return.description]]",
+            "attributes": [
+                {
+                    "name": "SessionName",
+                    "label": "[[CreateSession.sessionName.label]]",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "Default",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "userName",
+                    "label": "[[FollowUser.username.label]]",
+                    "description": "[[FollowUser.username.description]]",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "LikeTweet",
+            "label": "[[LikeTweet.label]]",
+            "description": "[[LikeTweet.description]]",
+            "nodeLabel": "[[LikeTweet.node_label]]",
+            "mainClass": "com.automationanywhere.botcommand.LikeTweetCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "[[LikeTweet.return_label]]",
+            "returnRequired": true,
+            "returnDescription": "[[LikeTweet.return.description]]",
+            "attributes": [
+                {
+                    "name": "SessionName",
+                    "label": "[[CreateSession.sessionName.label]]",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "Default",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "statusID",
+                    "label": "[[LikeTweet.statusID.label]]",
+                    "description": "[[LikeTweet.statusID.description]]",
+                    "type": "TEXTAREA",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Retweet",
+            "label": "[[Retweet.label]]",
+            "description": "[[Retweet.description]]",
+            "nodeLabel": "[[Retweet.node_label]]",
+            "mainClass": "com.automationanywhere.botcommand.RetweetCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "[[Retweet.return_label]]",
+            "returnRequired": true,
+            "returnDescription": "[[Retweet.return_label.description]]",
+            "attributes": [
+                {
+                    "name": "SessionName",
+                    "label": "[[CreateSession.sessionName.label]]",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "Default",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "statusID",
+                    "label": "[[Retweet.statusID.label]]",
+                    "description": "[[Retweet.statusID.description]]",
+                    "type": "TEXTAREA",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "RetweetWithComment",
+            "label": "[[RetweetWithComment.label]]",
+            "description": "[[RetweetWithComment.description]]",
+            "nodeLabel": "[[RetweetWithComment.node_label]]",
+            "mainClass": "com.automationanywhere.botcommand.RetweetWithCommentCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "[[RetweetWithComment.return_label]]",
+            "returnRequired": true,
+            "returnDescription": "[[RetweetWithComment.return_label.description]]",
+            "attributes": [
+                {
+                    "name": "SessionName",
+                    "label": "[[CreateSession.sessionName.label]]",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "Default",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "statusID",
+                    "label": "[[RetweetWithComment.statusID.label]]",
+                    "description": "[[RetweetWithComment.statusID.description]]",
+                    "type": "TEXTAREA",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "statusBody",
+                    "label": "[[RetweetWithComment.statusBody.label]]",
+                    "description": "[[RetweetWithComment.statusBody.description]]",
+                    "type": "TEXTAREA",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "SearchForTweets",
+            "label": "[[SearchForTweets.label]]",
+            "description": "[[SearchForTweets.description]]",
+            "nodeLabel": "[[SearchForTweets.node_label]]",
+            "mainClass": "com.automationanywhere.botcommand.SearchForTweetsCommand",
+            "icon": "pkg.svg",
+            "returnType": "TABLE",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "[[SearchForTweets.return_label]]",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "SessionName",
+                    "label": "[[CreateSession.sessionName.label]]",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "Default",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "searchCriteria",
+                    "label": "[[SearchForTweets.searchCriteria.label]]",
+                    "description": "[[SearchForTweets.searchCriteria.description]]",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "dblsearchCount",
+                    "label": "[[SearchForTweets.searchCount.label]]",
+                    "description": "[[SearchForTweets.searchCount.description]]",
+                    "type": "NUMBER",
+                    "defaultValue": {
+                        "number": "20",
+                        "type": "NUMBER"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "setstatus",
+            "label": "[[SetStatus.label]]",
+            "description": "[[SetStatus.description]]",
+            "nodeLabel": "[[SetStatus.node_label]]",
+            "mainClass": "com.automationanywhere.botcommand.SetStatusCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "[[SetStatus.return_label]]",
+            "returnRequired": true,
+            "returnDescription": "[[SetStatus.return.description]]",
+            "attributes": [
+                {
+                    "name": "SessionName",
+                    "label": "[[CreateSession.sessionName.label]]",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "Default",
+                        "type": "STRING"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "statusBody",
+                    "label": "[[SetStatus.statusBody.label]]",
+                    "description": "[[SetStatus.statusBody.description]]",
+                    "type": "TEXTAREA",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "statusMedia",
+                    "label": "[[SetStatus.statusMedia.label]]",
+                    "description": "[[SetStatus.statusMedia.description]]",
+                    "type": "FILE"
+                }
+            ]
+        }
+    ]
+}

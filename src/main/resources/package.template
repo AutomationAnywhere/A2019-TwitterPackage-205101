@@ -1,0 +1,11 @@
+{
+  "name": "Twitter",
+  "label": "[[label]]",
+  "description": "[[description]]",
+  "group": "Automation Anywhere",
+  "artifactName": "",
+  "packageVersion": "",
+  "codeVersion": "",
+  "author": "",
+  "commands": []
+}
